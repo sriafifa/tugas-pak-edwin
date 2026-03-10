@@ -1,106 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>asset management system</title>
-    <link  rel="stylesheet" href="asset/css/bootstrap.rtl.min.css"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Bootstrap 5 - Semua Komponen</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>  
-    
-    
-</header>
-<div class="container-fluid"> 
-    <div class="row">
-        <div class="col-2">
-            <img src="E:\semester 4\pertemuan5\img\logo.jpg" alt="Company Logo" class="logo">
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bootstrap Demo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="col-10">
-            <h1 class="text-primary">asset management system</h1>
-            <h1 class="text-success">Welcome to our Asset Management System</h1>
+    </nav>
+
+    <!-- ========== HERO / JUMBOTRON ========== -->
+    <section class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Selamat Datang di Demo Bootstrap 5</h1>
+            <p class="lead">Halaman ini menampilkan berbagai komponen Bootstrap 5 lengkap dengan utility.</p>
+            <button class="btn btn-light btn-lg">Mulai Jelajah</button>
+        </div>
+    </section>
+
+    <!-- ========== KONTEN UTAMA ========== -->
+    <div class="container my-5">
+
+        <!-- CARDS dengan BADGE -->
+        <h2 class="text-center mb-4">Paket Layanan <span class="badge bg-info text-dark">Promo</span></h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Paket Basic <span class="badge bg-secondary">Baru</span></h5>
+                        <p class="card-text">Cocok untuk pemula dengan fitur standar.</p>
+                        <a href="#" class="btn btn-outline-primary">Pilih</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Paket Pro <span class="badge bg-warning text-dark">Populer</span></h5>
+                        <p class="card-text">Fitur lengkap untuk profesional dan bisnis kecil.</p>
+                        <a href="#" class="btn btn-outline-primary">Pilih</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Paket Enterprise <span class="badge bg-danger">Premium</span></h5>
+                        <p class="card-text">Solusi skala besar dengan dukungan prioritas.</p>
+                        <a href="#" class="btn btn-outline-primary">Pilih</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FORM & TABLE (2 Kolom) -->
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h2 class="mb-3">Formulir Kontak</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="nama" class="form-label">Nama Lengkap</label>
+                        <input type="text" class="form-control" id="nama" placeholder="Masukkan nama">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="nama@email.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="pesan" class="form-label">Pesan</label>
+                        <textarea class="form-control" id="pesan" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">Daftar Pengguna</h2>
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Nama</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Andi Saputra</td>
+                            <td>andi@mail.com</td>
+                            <td><span class="badge bg-success">Aktif</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Siti Nurhaliza</td>
+                            <td>siti@mail.com</td>
+                            <td><span class="badge bg-warning text-dark">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Budi Santoso</td>
+                            <td>budi@mail.com</td>
+                            <td><span class="badge bg-secondary">Nonaktif</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- LIST GROUP, ALERT, DAN TOMBOL MODAL (3 Kolom) -->
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <h2 class="mb-3">Fitur Unggulan</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">⚡ Cepat dan ringan</li>
+                    <li class="list-group-item">📱 Responsif di semua perangkat</li>
+                    <li class="list-group-item">🎨 Mudah dikustomisasi</li>
+                    <li class="list-group-item">🔧 Dukungan komunitas</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h2 class="mb-3">Notifikasi</h2>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Berhasil!</strong> Data berhasil disimpan.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    <strong>Perhatian!</strong> Ini adalah alert biasa tanpa tombol tutup.
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2 class="mb-3">Interaksi</h2>
+                <!-- Tombol untuk memicu modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">
+                    Buka Modal Info
+                </button>
+                <p class="text-muted mt-2">Klik tombol di atas untuk melihat modal.</p>
+            </div>
         </div>
     </div>
-    <!-- navigation -->
-</header>
-<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-  <!-- Navbar content -->
-</nav>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar scroll</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Link
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Link</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Demo Bootstrap 5. Dibuat dengan <span class="text-danger">❤️</span> oleh tim.</p>
+            <p class="small mt-2">Menggunakan Bootstrap 5 dan utility classes.</p>
+        </div>
+    </footer>
+
+    <!-- ========== MODAL (diletakkan di luar container) ========== -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Informasi Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Ini adalah contoh modal dengan Bootstrap 5. Kamu bisa menaruh konten apapun di sini, seperti teks, gambar, atau form.</p>
+                    <p>Contoh <span class="badge bg-info text-dark">badge di dalam modal</span>.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-primary">Simpan</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</nav>
 
-<section id="topnews">
-   <!-- top news content -->
-    <div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="E:\semester 4\pertemuan5\img\couser.webp" class="d-block w-50" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="E:\semester 4\pertemuan5\img\cici.jpg" class="d-block w-85" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="E:\semester 4\pertemuan5\img\cutcut.jpg" class="d-block w-85" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div> 
-</section>
+    <!-- Bootstrap 5 JS (diperlukan untuk modal, alert dismiss, dll) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<section id ="gallery">
-    <! -- image galerry -->
-</section>
-
-</section> id="contact">
-    <! -- contact information -->
-</section>
-
-
-<footer>
-    <!-- text -->
-</footer>
-
-<script src=""></script>
+    <!-- Catatan Utility yang digunakan:
+         - Spacing: container, py-5, my-5, mt-5, mb-3, mb-4, g-4, mt-2
+         - Text: text-center, text-white, text-muted, text-danger, fw-bold, lead, display-4, small
+         - Background: bg-primary, bg-dark, bg-success, bg-warning, bg-secondary, bg-info
+         - Lainnya: align-items-start (tidak dipakai di sini), tapi banyak utility lain tersirat
+    -->
 </body>
 </html>
